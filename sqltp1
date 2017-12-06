@@ -1,0 +1,45 @@
+
+
+INSERT INTO `envios`(`Numero`, `pNumero`, `Cantidad`) 
+VALUES 
+(100,1,500),
+(100,2,1500),
+(100,3,100),
+(101,2,55),
+(101,3,225),
+(102,1,600),
+(102,3,300)
+
+
+consultas.
+
+1.
+SELECT `numero`, `pnombre`, `precio`, `tamaño` FROM `productos` WHERE 
+
+order by pnombre ASC
+
+2.
+
+SELECT `numero`, `nombre`, `domicilio`, `localidad` FROM `proveedores` WHERE localidad="Quilmes"
+
+3.
+
+SELECT `numero`, `pnumero`, `cantidad` FROM `envios` WHERE cantidad BETWEEN 200 and 300
+
+4.
+
+SELECT SUM(envios.cantidad)
+FROM envios
+WHERE 1;
+
+5.
+
+SELECT  `pnumero` FROM `envios` order by envios.numero DESC limit 3
+
+SELECT p.pnombre FROM `envios` as e, productos as p where e.pnumero + p.numero limit 3
+SELECT `pNombre` FROM `envios`,productos WHERE envios.pnumero + productos.pnumero LIMIT 3
+
+6
+
+SELECT `Nombre`,pNombre FROM `proveedores`as p,productos as pro WHERE p.Numero + pro.pNumero
+
